@@ -1,5 +1,3 @@
-This is read me file
-
 git add .
 git commit -m "read me file added"
 git branch -M main
