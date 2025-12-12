@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function multiplicationTable(n) {
+        for (let i = 1; i <= n; i++) {
+          let row = "";
+          for (let j = 1; j <= 10; j++) {
+            const val = i * j;
+            // highlight multiples of 5 (just demonstration)
+            if (val % 5 === 0) row += `(${val})\t`;
+            else row += `${val}\t`;
+          }
+          console.log(row);
+        }
+      }
+      multiplicationTable(5);
+    </script>
+  </body>
+</html>

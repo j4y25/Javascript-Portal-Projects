@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="fvalue" type="number" placeholder="Enter Your 1 Number" />
+    <input id="svalue" type="number" placeholder="Enter Your 2 Number" />
+    <input id="oprater" type="text" placeholder="Enter symbol" />
+    <button id="button">=</button>
+    <p id="output"></p>
+    <script>
+      const fvalue = document.getElementById("fvalue");
+      const svalue = document.getElementById("svalue");
+      const oprater = document.getElementById("oprater");
+      const button = document.getElementById("button");
+      const output = document.getElementById("output");
+
+      button.addEventListener("click", () => {
+        const f1 = Number(fvalue.value);
+        const f2 = Number(svalue.value);
+        const op = oprater.value.trim();
+        let result;
+        // oprater
+        if (op === "+") {
+          result = f1 + f2;
+        } else if (op === "-") {
+          result = f1 - f2;
+        } else if (op === "*") {
+          result = f1 * f2;
+        } else if (op === "/") {
+          result = f2 !== 0 ? f1 / f2 : "Cannot divide by zero!";
+        } else {
+          result = "Invalid operator! Use +, -, *, or /";
+        }
+
+        output.innerText = `result :${result}`;
+      });
+    </script>
+  </body>
+</html>
