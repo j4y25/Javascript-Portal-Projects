@@ -1,8 +1,9 @@
-git status
+This is read me file
+
 git add .
 git commit -m "read me file added"
 git branch -M main
-git push -u origin main
+git push
 
 git init
 git add .
