@@ -5,5 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <script>
+      //1 an object in array in object
+      const quotedata = {
+        title: "Motivational Quote",
+        quotes: [
+          { text: "Jo jita wahi sikandar", length: 21 },
+          { text: "Dar ke aage jit hai", length: 19 },
+        ],
+      };
+      //2 loop though the array
+      for (let i = 0; i < quotedata.quotes.length; i++) {
+        const qoutput = quotedata.quotes[i];
+
+        //condistion
+        if (qoutput.length) {
+          console.log(`${qoutput.text} This is a long Quote`);
+        } else {
+          console.log(`${qoutput.text} This is a short Quote`);
+        }
+      }
+    </script>
+  </body>
 </html>
