@@ -20,7 +20,7 @@
         const qoutput = quotedata.quotes[i];
 
         //condistion
-        if (qoutput.length) {
+        if (qoutput.length > 12) {
           console.log(`${qoutput.text} This is a long Quote`);
         } else {
           console.log(`${qoutput.text} This is a short Quote`);

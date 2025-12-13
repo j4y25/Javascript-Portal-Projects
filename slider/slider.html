@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .slider {
+      width: 400px;
+      height: 250px;
+      margin: 20px auto;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    .buttons button {
+      padding: 8px 16px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="slider">
+      <img
+        id="slide"
+        src="https://cdn.pixabay.com/photo/2025/11/25/21/36/nature-9977099_1280.jpg"
+        alt="slider image"
+      />
+    </div>
+
+    <div class="buttons">
+      <button onclick="prevslide()">Prev</button>
+      <button onclick="nextslide()">Next</button>
+    </div>
+
+    <script>
+      const images = [
+        "https://cdn.pixabay.com/photo/2025/11/25/21/36/nature-9977099_1280.jpg",
+        "https://cdn.pixabay.com/photo/2025/11/26/06/44/pop-up-9977611_1280.jpg",
+        "https://cdn.pixabay.com/photo/2023/11/19/20/25/bubble-8399795_1280.jpg",
+      ];
+
+      let index = 0;
+
+      const slide = document.getElementById("slide");
+      function showslide() {
+        slide.src = images[index];
+      }
+      function nextslide() {
+        index++;
+        if (index >= images.length) {
+          index = 0;
+        }
+        showslide();
+      }
+      function prevslide() {
+        index--;
+        if (index < 0) {
+          index = images.length - 1;
+        }
+        showslide();
+      }
+    </script>
+  </body>
+</html>
